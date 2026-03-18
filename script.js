@@ -1,86 +1,46 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// 1. DYNAMIC CLINIC STATUS LOGIC
-function updateClinicStatus() {
-    const statusDot = document.querySelector('.status-dot');
-    const statusText = document.querySelector('.status-text');
-    const now = new Date();
-    const hour = now.getHours();
+// 1. LIVE CLINIC HOURS LOGIC
+function updateStatus() {
+    const dot = document.querySelector('.status-dot');
+    const text = document.querySelector('.status-text');
+    const hour = new Date().getHours();
 
-    // Opening Hours: 9 AM (9) to 10 PM (22)
-    if (hour >= 9 && hour < 22) {
-        statusDot.classList.add('active');
-        statusDot.style.background = "#22c55e";
-        statusText.innerText = "Clinic Open - Walk-ins Welcome";
-        statusText.style.color = "#22c55e";
+    if (hour >= 9 && hour < 22) { // 9 AM to 10 PM
+        dot.classList.add('active');
+        text.innerText = "Clinic Open";
+        text.classList.replace('text-slate-400', 'text-green-500');
     } else {
-        statusDot.classList.remove('active');
-        statusDot.style.background = "#ef4444";
-        statusText.innerText = "Closed - Opens at 9:00 AM";
-        statusText.style.color = "#ef4444";
+        dot.classList.remove('active');
+        dot.style.background = "#ef4444";
+        text.innerText = "Clinic Closed";
+        text.classList.replace('text-slate-400', 'text-red-500');
     }
 }
 
-// 2. LIVE MAP TOGGLE
+// 2. TOGGLE MAP MODAL
 function toggleMap() {
     const modal = document.getElementById('mapModal');
-    if (modal.style.display === 'flex') {
-        gsap.to(".modal-content", { y: 100, opacity: 0, duration: 0.4 });
-        gsap.to(".modal-backdrop", { opacity: 0, duration: 0.4, onComplete: () => {
-            modal.style.display = 'none';
-        }});
+    if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        gsap.from(".relative.bg-white", { y: 50, opacity: 0, duration: 0.5 });
     } else {
-        modal.style.display = 'flex';
-        gsap.fromTo(".modal-backdrop", { opacity: 0 }, { opacity: 1, duration: 0.5 });
-        gsap.fromTo(".modal-content", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "expo.out" });
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
     }
 }
 
-// 3. MASTER SCROLL ANIMATIONS
-function initAnimations() {
-    // Hero Entrance
-    gsap.from(".hero-content > *", {
-        y: 50,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 1.2,
-        ease: "power4.out"
-    });
+// 3. PAGE ANIMATIONS
+window.addEventListener('DOMContentLoaded', () => {
+    updateStatus();
 
-    gsap.from(".hero-arch", {
-        x: 100,
-        opacity: 0,
-        scale: 0.8,
-        duration: 1.5,
-        ease: "expo.out",
-        delay: 0.2
-    });
+    // Hero Entry
+    gsap.from(".hero-reveal > *", { y: 40, opacity: 0, stagger: 0.15, duration: 1, ease: "power4.out" });
 
     // Staggered Service Cards
     gsap.from(".reveal-up", {
-        scrollTrigger: {
-            trigger: "#services",
-            start: "top 80%"
-        },
-        y: 100,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1.2,
-        ease: "power3.out"
+        scrollTrigger: { trigger: "#services", start: "top 80%" },
+        y: 100, opacity: 0, stagger: 0.2, duration: 1.2, ease: "expo.out"
     });
-
-    // Parallax on Floating Card
-    gsap.to(".animate-float", {
-        y: -40,
-        scrollTrigger: {
-            trigger: ".hero-section",
-            scrub: 2
-        }
-    });
-}
-
-// Initialize
-window.addEventListener('DOMContentLoaded', () => {
-    updateClinicStatus();
-    initAnimations();
 });
