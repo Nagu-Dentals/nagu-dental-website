@@ -1,16 +1,14 @@
 /* ELITE OVERRIDES */
-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
 
 .glass-nav {
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(25px) saturate(180%);
 }
 
 .hero-arch {
-    border-radius: 240px 240px 60px 60px;
-    transition: all 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+    border-radius: 200px 200px 40px 40px;
 }
-.hero-arch:hover { border-radius: 60px; transform: scale(1.02); }
 
 /* STATUS PULSE */
 .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; position: relative; }
@@ -18,24 +16,14 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; }
     content: ''; position: absolute; inset: -4px; border-radius: 50%;
     border: 2px solid #22c55e; animation: pulse 1.5s infinite;
 }
-
 @keyframes pulse { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
 
-/* HAPTIC TOUCH */
-.active-haptic:active { transform: scale(0.92); transition: 0.1s; }
+/* BUTTON EFFECTS */
+.active-haptic:active { transform: scale(0.94); transition: 0.1s; }
 
 .social-sticker {
-    width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05);
-    border-radius: 18px; display: flex; align-items: center; justify-content: center;
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 48px; height: 48px; background: rgba(255,255,255,0.05);
+    border-radius: 14px; display: flex; align-items: center; justify-content: center;
 }
-.social-sticker:hover { transform: translateY(-8px) rotate(8deg); background: #0085cc; }
 
-.hover-lift:hover { transform: translateY(-15px); border-color: #0085cc; box-shadow: 0 40px 80px rgba(0, 133, 204, 0.1); }
-
-.no-scrollbar::-webkit-scrollbar { display: none; }
-
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-.animate-float { animation: float 4s ease-in-out infinite; }
-
-.glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+.hover-lift:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,133,204,0.1); }
