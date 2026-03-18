@@ -1,42 +1,41 @@
-/* ELITE UI OVERRIDES */
+/* ELITE OVERRIDES */
 body { font-family: 'Plus Jakarta Sans', sans-serif; }
 
 .glass-nav {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(25px) saturate(180%);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
 }
 
 .hero-arch {
-    border-radius: 260px 260px 40px 40px;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 240px 240px 60px 60px;
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.2, 1);
 }
-.hero-arch:hover { border-radius: 40px; transform: scale(1.02); }
+.hero-arch:hover { border-radius: 60px; transform: scale(1.02); }
 
 /* STATUS PULSE */
-.status-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; position: relative; }
+.status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; position: relative; }
 .status-dot::after {
-    content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #22c55e;
-    animation: pulse-ring 1.5s infinite;
+    content: ''; position: absolute; inset: -4px; border-radius: 50%;
+    border: 2px solid #22c55e; animation: pulse 1.5s infinite;
 }
 
-@keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+@keyframes pulse { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
 
-/* STICKERS & BADGES */
+/* HAPTIC TOUCH */
+.active-haptic:active { transform: scale(0.92); transition: 0.1s; }
+
 .social-sticker {
-    width: 52px; height: 52px; background: rgba(255, 255, 255, 0.05);
+    width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05);
     border-radius: 18px; display: flex; align-items: center; justify-content: center;
-    font-size: 20px; transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.social-sticker:hover { transform: translateY(-10px) rotate(10deg); background: #0085cc; }
+.social-sticker:hover { transform: translateY(-8px) rotate(8deg); background: #0085cc; }
 
-.hub-btn {
-    width: 65px; height: 65px; border-radius: 22px;
-    display: flex; align-items: center; justify-content: center; font-size: 24px;
-}
+.hover-lift:hover { transform: translateY(-15px); border-color: #0085cc; box-shadow: 0 40px 80px rgba(0, 133, 204, 0.1); }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
-.active-haptic:active { transform: scale(0.92); }
+
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 .animate-float { animation: float 4s ease-in-out infinite; }
 
-.glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 1px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+.glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
