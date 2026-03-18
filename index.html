@@ -15,21 +15,15 @@
 
 <style>
 body {
-  background: #0b0f19;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#0f172a,#020617);
+  color: white;
+  font-family: system-ui;
 }
 
-/* glass effect */
 .glass {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* glow */
-.glow {
-  box-shadow: 0 0 40px rgba(0,255,200,0.2);
 }
 </style>
 
@@ -39,25 +33,26 @@ body {
 
 <!-- NAVBAR -->
 
-<header class="fixed top-0 w-full glass z-50">
+<header class="fixed top-0 w-full z-50 glass">
 <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-<!-- LOGO PLACEHOLDER -->
+<!-- LOGO SPACE -->
 
-<div class="flex items-center gap-2">
+<div class="flex items-center gap-3">
 <div class="w-10 h-10 bg-white rounded-full"></div>
-<span class="font-semibold">Your Clinic</span>
+<span class="font-semibold">Your Logo</span>
 </div>
 
 <nav class="hidden md:flex gap-8 text-sm">
 <a href="#">Home</a>
 <a href="#services">Services</a>
+<a href="#about">About</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <a href="https://wa.me/918861932535"
-class="px-5 py-2 rounded-full glass glow">
+class="bg-teal-500 text-black px-5 py-2 rounded-full">
 Book Now </a>
 
 </div>
@@ -70,34 +65,30 @@ Book Now </a>
 <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
 
 <div>
-<h1 class="hero text-5xl md:text-6xl font-bold leading-tight">
-Crafting Perfect <br>
-<span class="text-teal-400">Smiles</span>
+<h1 class="hero text-6xl font-bold leading-tight">
+Redefining <br>
+<span class="text-teal-400">Dental Care</span>
 </h1>
 
 <p class="mt-6 text-gray-400">
-Premium dental care with advanced technology in Bengaluru.
+Luxury dental experience with precision and comfort.
 </p>
 
 <div class="mt-8 flex gap-4">
-<a href="#contact"
-class="px-6 py-3 rounded-full bg-teal-500 text-black font-semibold glow">
+<a href="#contact" class="bg-teal-400 text-black px-6 py-3 rounded-full">
 Book Appointment
 </a>
 
 <a href="tel:+918861932535"
-class="px-6 py-3 rounded-full border border-gray-600">
+class="border px-6 py-3 rounded-full">
 Call Now </a>
 
 </div>
-
 </div>
 
 <div class="relative">
-
-<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db"
 class="hero-img rounded-2xl shadow-2xl">
-
 </div>
 
 </div>
@@ -107,20 +98,18 @@ class="hero-img rounded-2xl shadow-2xl">
 
 <section id="services" class="py-24">
 
-<h2 class="text-center text-4xl font-bold mb-16">
-Our Services
-</h2>
+<h2 class="text-center text-4xl font-bold mb-16">Services</h2>
 
-<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+<div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6">
 
 <div class="glass p-8 rounded-2xl hover:scale-105 transition">
 <h4 class="text-xl font-semibold">Root Canal</h4>
-<p class="text-gray-400 mt-3">Advanced painless treatment</p>
+<p class="text-gray-400 mt-3">Advanced painless care</p>
 </div>
 
 <div class="glass p-8 rounded-2xl hover:scale-105 transition">
 <h4 class="text-xl font-semibold">Dental Implants</h4>
-<p class="text-gray-400 mt-3">Permanent tooth solution</p>
+<p class="text-gray-400 mt-3">Permanent solution</p>
 </div>
 
 <div class="glass p-8 rounded-2xl hover:scale-105 transition">
@@ -132,20 +121,36 @@ Our Services
 
 </section>
 
+<!-- ABOUT -->
+
+<section id="about" class="py-24 bg-[#020617]">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
+
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
+class="rounded-2xl">
+
+<div>
+<h2 class="text-4xl font-bold">About Us</h2>
+<p class="mt-6 text-gray-400">
+We provide world-class dental care with modern technology and patient-first approach.
+</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- GALLERY -->
 
-<section id="gallery" class="py-24 bg-[#0e1422]">
+<section id="gallery" class="py-24">
 
-<h2 class="text-center text-4xl font-bold mb-16">
-Gallery
-</h2>
+<h2 class="text-center text-4xl font-bold mb-16">Gallery</h2>
 
-<div class="grid md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto">
-
+<div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-6">
 <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe" class="rounded-xl">
 <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded-xl">
 <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" class="rounded-xl">
-
 </div>
 
 </section>
@@ -158,10 +163,10 @@ Gallery
 
 <form class="mt-10 max-w-md mx-auto grid gap-4">
 
-<input placeholder="Name" class="p-3 rounded bg-[#111827] border border-gray-700">
-<input placeholder="Phone" class="p-3 rounded bg-[#111827] border border-gray-700">
+<input placeholder="Name" class="p-3 rounded bg-black border border-gray-700">
+<input placeholder="Phone" class="p-3 rounded bg-black border border-gray-700">
 
-<button class="bg-teal-500 text-black py-3 rounded glow">
+<button class="bg-teal-400 text-black py-3 rounded">
 Submit
 </button>
 
@@ -169,38 +174,27 @@ Submit
 
 </section>
 
-<!-- FLOAT BUTTON -->
-
-<a href="https://wa.me/918861932535"
-class="fixed bottom-6 right-6 bg-green-500 text-black p-4 rounded-full glow">
-💬 </a>
-
 <script>
 
-// HERO ENTRY
-gsap.from(".hero", { y:80, opacity:0, duration:1 });
-gsap.from(".hero-img", { scale:0.8, opacity:0, duration:1.2 });
+// HERO
+gsap.from(".hero",{y:100,opacity:0,duration:1});
+gsap.from(".hero-img",{scale:0.8,opacity:0,duration:1.2});
 
-// SCROLL ANIMATIONS
-gsap.utils.toArray("section").forEach(sec => {
-gsap.from(sec, {
-  opacity: 0,
-  y: 80,
-  duration: 1,
-  scrollTrigger: {
-    trigger: sec,
-    start: "top 80%"
-  }
+// SCROLL
+gsap.utils.toArray("section").forEach(sec=>{
+gsap.from(sec,{
+opacity:0,
+y:80,
+duration:1,
+scrollTrigger:{
+trigger:sec,
+start:"top 80%"
+}
 });
 });
 
-// FLOATING IMAGE EFFECT
-gsap.to(".hero-img", {
-  y: 20,
-  repeat: -1,
-  yoyo: true,
-  duration: 3
-});
+// FLOAT
+gsap.to(".hero-img",{y:20,repeat:-1,yoyo:true,duration:3});
 
 </script>
 
