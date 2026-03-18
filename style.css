@@ -1,102 +1,49 @@
-/* Core Foundations */
-html { scroll-behavior: smooth; }
-body { background: #fcfdff; cursor: default; }
+/* ELITE UI FOUNDATION */
+body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; overflow-x: hidden; background: #fcfdff; }
 
-/* Micro-Detail Glassmorphism */
+/* GLASSMORPHISM NAV */
 .glass-nav {
     background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(160%);
 }
 
-/* Arch mask for Elite Hero */
+/* HERO ARCH DESIGN */
 .hero-arch {
-    border-radius: 260px 260px 60px 60px;
-    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 200px 200px 40px 40px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.hero-arch:hover {
-    border-radius: 60px;
-}
+.hero-arch:hover { border-radius: 40px; }
 
-/* Service Card Lift */
-.service-card {
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.service-card:hover {
-    transform: translateY(-20px);
-    border-color: #0085cc;
-    box-shadow: 0 40px 80px rgba(0, 133, 204, 0.1);
-}
+/* HAPTIC FEEDBACK SENSATION */
+.active-haptic:active { transform: scale(0.92); transition: transform 0.1s ease; }
 
-/* Sticker Haptics */
-.social-sticker {
-    width: 52px;
-    height: 52px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-}
-.social-sticker:hover {
-    background: #0085cc;
-    transform: scale(1.15) rotate(8deg);
-}
-
-/* Tooltip micro-detail */
-.tooltip {
-    position: absolute;
-    bottom: -30px;
-    background: white;
-    color: black;
-    font-size: 9px;
-    font-weight: 800;
-    padding: 4px 8px;
-    border-radius: 6px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-}
-.social-sticker:hover .tooltip {
-    opacity: 1;
-    bottom: -35px;
-}
-
-/* Status Pulse Logic */
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background: #22c55e;
-    border-radius: 50%;
-    position: relative;
-}
+/* DYNAMIC STATUS DOT */
+.status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; position: relative; }
 .status-dot.active::after {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    border: 2px solid #22c55e;
-    animation: pulse-ring 1.5s infinite;
+    content: ''; position: absolute; inset: -4px; border-radius: 50%;
+    border: 2px solid #22c55e; animation: ripple 1.5s infinite;
 }
-@keyframes pulse-ring {
-    0% { transform: scale(0.5); opacity: 1; }
-    100% { transform: scale(2.5); opacity: 0; }
+@keyframes ripple { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+
+/* STICKER BADGE */
+.sticker-badge {
+    background: rgba(0, 133, 204, 0.9); color: white; padding: 10px 20px;
+    border-radius: 15px; font-weight: 900; font-size: 10px; text-transform: uppercase;
+    backdrop-filter: blur(10px); letter-spacing: 0.1em;
 }
 
-/* Floating Hub Buttons */
-.hub-btn {
-    width: 65px;
-    height: 65px;
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    transition: transform 0.2s cubic-bezier(0.1, 0.7, 0.1, 1);
+/* SOCIAL STICKERS */
+.social-sticker {
+    width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px; display: flex; align-items: center; justify-content: center;
+    font-size: 18px; transition: all 0.4s ease;
 }
+.social-sticker:hover { transform: translateY(-8px) rotate(8deg); background: #0085cc; }
 
-.hide-scrollbar::-webkit-scrollbar { display: none; }
+/* SERVICE CARDS */
+.service-card { transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+.service-card:hover { transform: translateY(-15px); border-color: #0085cc; box-shadow: 0 40px 80px rgba(0, 133, 204, 0.1); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+.animate-float { animation: float 3s ease-in-out infinite; }
