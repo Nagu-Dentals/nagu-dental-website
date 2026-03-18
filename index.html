@@ -7,68 +7,66 @@
 
 <title>Nagu Dental Clinic</title>
 
-<!-- Tailwind CSS -->
-
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- GSAP Animation -->
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-<style>
-body { font-family: Arial, sans-serif; }
-</style>
 
 </head>
 
 <body class="bg-white text-gray-800">
 
+<!-- NAVBAR -->
+
+<header class="fixed top-0 w-full bg-white shadow z-50">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+<h1 class="font-bold text-xl text-teal-700">Nagu Dental</h1>
+
+<nav class="space-x-6 hidden md:block">
+<a href="#" class="hover:text-teal-600">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a href="https://wa.me/918861932535"
+class="bg-teal-700 text-white px-4 py-2 rounded-full">
+Book Now </a>
+
+</div>
+</header>
+
 <!-- HERO -->
 
-<section class="bg-gradient-to-br from-teal-50 to-white py-20">
+<section class="pt-32 pb-20 bg-gradient-to-br from-teal-50 to-white">
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
 
 <div>
-<p class="text-teal-600 font-semibold">Advanced Dental Care</p>
-
-<h1 class="hero-title text-4xl md:text-5xl font-bold mt-4">
-Keep your smile clean & great
+<h1 class="hero text-5xl font-bold">
+Keep your smile clean & confident
 </h1>
 
 <p class="mt-4 text-gray-600">
-Modern painless dental treatments in Bengaluru.
+Advanced multi-speciality dental clinic in Bengaluru.
 </p>
 
 <div class="mt-6 flex gap-4">
-<a href="https://wa.me/918861932535"
+<a href="tel:+918861932535"
 class="bg-teal-700 text-white px-6 py-3 rounded-full">
-WhatsApp
+Call Now
 </a>
 
-<a href="tel:+918861932535"
-class="border border-teal-700 px-6 py-3 rounded-full">
-Call Now </a>
+<a href="#contact"
+class="border px-6 py-3 rounded-full">
+Book Appointment </a>
 
 </div>
-
-<div class="mt-8 flex gap-8">
-<div>
-<h3 class="counter text-xl font-bold text-teal-800" data-target="10000">0</h3>
-<p>Patients</p>
-</div>
-
-<div>
-<h3 class="counter text-xl font-bold text-teal-800" data-target="5">0</h3>
-<p>Years</p>
-</div>
-</div>
-
 </div>
 
 <div>
 <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db"
-class="rounded-full shadow-lg">
+class="rounded-full shadow-xl">
 </div>
 
 </div>
@@ -76,106 +74,103 @@ class="rounded-full shadow-lg">
 
 <!-- SERVICES -->
 
-<section class="py-16 text-center">
+<section id="services" class="py-20 text-center">
 
-<h2 class="text-3xl font-bold text-teal-900">Our Services</h2>
+<h2 class="text-4xl font-bold text-teal-900">Our Services</h2>
 
-<div class="grid md:grid-cols-3 gap-6 mt-10 px-6">
+<div class="grid md:grid-cols-3 gap-8 mt-12 px-6">
 
-<div class="p-6 border rounded-xl">
+<div class="p-8 rounded-xl shadow hover:shadow-xl">
 <h4 class="font-semibold">Root Canal</h4>
 <p class="text-gray-500 mt-2">Pain-free treatment</p>
 </div>
 
-<div class="p-6 border rounded-xl">
+<div class="p-8 rounded-xl shadow hover:shadow-xl">
 <h4 class="font-semibold">Dental Implants</h4>
-<p class="text-gray-500 mt-2">Permanent solution</p>
+<p class="text-gray-500 mt-2">Permanent teeth replacement</p>
 </div>
 
-<div class="p-6 border rounded-xl">
+<div class="p-8 rounded-xl shadow hover:shadow-xl">
 <h4 class="font-semibold">Teeth Cleaning</h4>
-<p class="text-gray-500 mt-2">Professional care</p>
+<p class="text-gray-500 mt-2">Complete oral hygiene</p>
 </div>
 
+</div>
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery" class="bg-gray-50 py-20 text-center">
+
+<h2 class="text-4xl font-bold text-teal-900">Gallery</h2>
+
+<div class="grid md:grid-cols-3 gap-6 mt-10 px-6">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded-lg">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded-lg">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" class="rounded-lg">
 </div>
 
 </section>
 
 <!-- TESTIMONIAL -->
 
-<section class="bg-teal-50 py-16 text-center">
+<section class="py-20 text-center">
 
-<h2 class="text-3xl font-bold text-teal-900">What Patients Say</h2>
+<h2 class="text-4xl font-bold text-teal-900">What Patients Say</h2>
 
-<div class="mt-8">
-<p id="testimonial" class="text-lg">
-"Very smooth and painless treatment."
+<p id="review" class="mt-6 text-lg">
+"Best dental clinic experience."
 </p>
-</div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section class="py-16 text-center">
+<section id="contact" class="bg-teal-50 py-20 text-center">
 
-<h2 class="text-3xl font-bold text-teal-900">Book Appointment</h2>
+<h2 class="text-4xl font-bold text-teal-900">Contact Us</h2>
 
-<form class="mt-6 max-w-md mx-auto grid gap-4">
+<p class="mt-4">Bengaluru, Karnataka</p>
 
-<input placeholder="Your Name" class="p-3 border rounded">
-<input placeholder="Phone Number" class="p-3 border rounded">
-
+<form class="mt-8 max-w-md mx-auto grid gap-4">
+<input placeholder="Name" class="p-3 rounded border">
+<input placeholder="Phone" class="p-3 rounded border">
 <button class="bg-teal-700 text-white py-3 rounded">
 Submit
 </button>
-
 </form>
 
 </section>
 
-<!-- FLOAT WHATSAPP -->
+<!-- FOOTER -->
+
+<footer class="bg-gray-900 text-white text-center py-6">
+<p>© 2026 Nagu Dental Clinic</p>
+</footer>
+
+<!-- FLOAT BUTTON -->
 
 <a href="https://wa.me/918861932535"
 class="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full">
 💬 </a>
 
-<!-- SCRIPT -->
-
 <script>
 
-// ANIMATION
-gsap.from(".hero-title", { y:50, opacity:0, duration:1 });
+// animation
+gsap.from(".hero",{y:60,opacity:0,duration:1});
 
-// COUNTER
-document.querySelectorAll(".counter").forEach(counter=>{
-let update=()=>{
-let target=+counter.getAttribute("data-target");
-let count=+counter.innerText;
-let inc=target/100;
-
-if(count<target){
-counter.innerText=Math.ceil(count+inc);
-setTimeout(update,20);
-}else{
-counter.innerText=target+"+";
-}
-};
-update();
-});
-
-// TESTIMONIAL ROTATION
-let texts=[
-"Very smooth and painless treatment.",
-"Friendly doctors and clean clinic.",
-"Highly recommended dental care."
+// testimonial rotate
+let reviews=[
+"Very smooth treatment experience",
+"Friendly doctors",
+"Highly recommended clinic"
 ];
 
 let i=0;
 
 setInterval(()=>{
-i=(i+1)%texts.length;
-document.getElementById("testimonial").innerText=texts[i];
+i=(i+1)%reviews.length;
+document.getElementById("review").innerText=reviews[i];
 },3000);
 
 </script>
