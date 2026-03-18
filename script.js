@@ -1,46 +1,41 @@
-gsap.registerPlugin(ScrollTrigger);
+// 1. PRELOADER & HERO REVEAL
+window.addEventListener('load', () => {
+    gsap.to("#loader", { opacity: 0, duration: 0.8, onComplete: () => {
+        document.getElementById('loader').style.display = 'none';
+        gsap.from(".hero-content > *", { y: 60, opacity: 0, stagger: 0.1, duration: 1.2, ease: "expo.out" });
+    }});
+});
 
-// 1. LIVE CLINIC HOURS LOGIC
+// 2. LIVE STATUS LOGIC
 function updateStatus() {
     const dot = document.querySelector('.status-dot');
     const text = document.querySelector('.status-text');
     const hour = new Date().getHours();
 
-    if (hour >= 9 && hour < 22) { // 9 AM to 10 PM
-        dot.classList.add('active');
-        text.innerText = "Clinic Open";
-        text.classList.replace('text-slate-400', 'text-green-500');
+    if (hour >= 9 && hour < 22) {
+        dot.style.background = "#22c55e";
+        text.innerText = "Open Everyday";
+        text.style.color = "#22c55e";
     } else {
-        dot.classList.remove('active');
         dot.style.background = "#ef4444";
         text.innerText = "Clinic Closed";
-        text.classList.replace('text-slate-400', 'text-red-500');
+        text.style.color = "#ef4444";
     }
 }
 
-// 2. TOGGLE MAP MODAL
+// 3. MAP MODAL TOGGLE
 function toggleMap() {
     const modal = document.getElementById('mapModal');
     if (modal.classList.contains('hidden')) {
         modal.classList.remove('hidden');
         modal.classList.add('flex');
-        gsap.from(".relative.bg-white", { y: 50, opacity: 0, duration: 0.5 });
+        gsap.from(".relative.bg-white", { y: 100, opacity: 0, duration: 0.6, ease: "expo.out" });
     } else {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+        gsap.to(".relative.bg-white", { y: 100, opacity: 0, duration: 0.4, onComplete: () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }});
     }
 }
 
-// 3. PAGE ANIMATIONS
-window.addEventListener('DOMContentLoaded', () => {
-    updateStatus();
-
-    // Hero Entry
-    gsap.from(".hero-reveal > *", { y: 40, opacity: 0, stagger: 0.15, duration: 1, ease: "power4.out" });
-
-    // Staggered Service Cards
-    gsap.from(".reveal-up", {
-        scrollTrigger: { trigger: "#services", start: "top 80%" },
-        y: 100, opacity: 0, stagger: 0.2, duration: 1.2, ease: "expo.out"
-    });
-});
+updateStatus();
