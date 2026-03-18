@@ -1,49 +1,42 @@
-/* ELITE UI FOUNDATION */
-body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; overflow-x: hidden; background: #fcfdff; }
+/* ELITE UI OVERRIDES */
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
 
-/* GLASSMORPHISM NAV */
 .glass-nav {
     background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(20px) saturate(160%);
+    backdrop-filter: blur(25px) saturate(180%);
 }
 
-/* HERO ARCH DESIGN */
 .hero-arch {
-    border-radius: 200px 200px 40px 40px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 260px 260px 40px 40px;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.hero-arch:hover { border-radius: 40px; }
+.hero-arch:hover { border-radius: 40px; transform: scale(1.02); }
 
-/* HAPTIC FEEDBACK SENSATION */
-.active-haptic:active { transform: scale(0.92); transition: transform 0.1s ease; }
-
-/* DYNAMIC STATUS DOT */
-.status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; position: relative; }
-.status-dot.active::after {
-    content: ''; position: absolute; inset: -4px; border-radius: 50%;
-    border: 2px solid #22c55e; animation: ripple 1.5s infinite;
-}
-@keyframes ripple { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
-
-/* STICKER BADGE */
-.sticker-badge {
-    background: rgba(0, 133, 204, 0.9); color: white; padding: 10px 20px;
-    border-radius: 15px; font-weight: 900; font-size: 10px; text-transform: uppercase;
-    backdrop-filter: blur(10px); letter-spacing: 0.1em;
+/* STATUS PULSE */
+.status-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; position: relative; }
+.status-dot::after {
+    content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #22c55e;
+    animation: pulse-ring 1.5s infinite;
 }
 
-/* SOCIAL STICKERS */
+@keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+
+/* STICKERS & BADGES */
 .social-sticker {
-    width: 50px; height: 50px; background: rgba(255, 255, 255, 0.05);
+    width: 52px; height: 52px; background: rgba(255, 255, 255, 0.05);
     border-radius: 18px; display: flex; align-items: center; justify-content: center;
-    font-size: 18px; transition: all 0.4s ease;
+    font-size: 20px; transition: 0.3s;
 }
-.social-sticker:hover { transform: translateY(-8px) rotate(8deg); background: #0085cc; }
+.social-sticker:hover { transform: translateY(-10px) rotate(10deg); background: #0085cc; }
 
-/* SERVICE CARDS */
-.service-card { transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
-.service-card:hover { transform: translateY(-15px); border-color: #0085cc; box-shadow: 0 40px 80px rgba(0, 133, 204, 0.1); }
+.hub-btn {
+    width: 65px; height: 65px; border-radius: 22px;
+    display: flex; align-items: center; justify-content: center; font-size: 24px;
+}
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-.animate-float { animation: float 3s ease-in-out infinite; }
+.active-haptic:active { transform: scale(0.92); }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+.glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 1px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
