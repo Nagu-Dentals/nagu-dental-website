@@ -24,11 +24,10 @@
         </div>
         
         <div class="hidden lg:flex gap-8 text-[10px] font-900 uppercase tracking-widest text-slate-500">
-            <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-            <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
-            <a href="#why-us" class="hover:text-blue-600 transition-colors">Why Us</a>
-            <a href="#gallery" class="hover:text-blue-600 transition-colors">Gallery</a>
-            <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#articles" class="nav-link">Articles</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
 
         <div class="flex items-center gap-4">
@@ -36,236 +35,183 @@
                 <div class="status-dot"></div>
                 <span class="status-text text-[9px] font-black uppercase text-slate-400">Live Status</span>
             </div>
-            <button onclick="toggleMap()" class="bg-slate-900 text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest active-haptic shadow-xl">Live Map 📍</button>
+            <a href="#booking" class="bg-slate-900 text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest active-haptic shadow-xl">Book Now</a>
         </div>
     </nav>
 
     <section class="pt-48 pb-20 px-6 md:px-16 lg:flex items-center gap-20 overflow-hidden">
         <div class="lg:w-1/2 space-y-8 hero-content">
             <div class="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
-                <span class="animate-bounce text-xs">✨</span>
+                <span class="text-xs">✨</span>
                 <span class="text-[10px] font-black text-blue-700 uppercase tracking-widest">Way For Healthy Smile...</span>
             </div>
             <h1 class="text-7xl md:text-8xl font-800 text-slate-900 leading-[0.85] tracking-tighter">
                 Advance <br><span class="text-[#0085cc] gradient-text">Dental Care.</span>
             </h1>
-            <p class="text-slate-500 text-lg leading-relaxed max-w-lg">
-                Experience world-class sterilization and painless dentistry. We combine modern technology with affordable, compassionate care for your entire family.
-            </p>
-            <div class="flex flex-wrap gap-5">
-                <a href="https://wa.me/918861932535" class="bg-slate-900 text-white px-12 py-6 rounded-2xl font-bold active-haptic shadow-2xl">Book Now</a>
-                <div class="flex items-center gap-4 px-6 py-4 bg-white rounded-2xl shadow-sm border border-slate-50">
-                    <span class="text-2xl">⭐</span>
-                    <div>
-                        <div class="font-900 text-slate-900 leading-none">5.0 Rating</div>
-                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Google Reviews</div>
-                    </div>
-                </div>
-            </div>
+            <p class="text-slate-500 text-lg leading-relaxed max-w-lg italic">"Your smile is our priority. Experience the difference of elite multi-speciality care."</p>
         </div>
         <div class="lg:w-1/2 mt-16 lg:mt-0 relative">
-            <div class="hero-arch h-[650px] border-[16px] border-white shadow-2xl overflow-hidden relative">
+            <div class="hero-arch h-[550px] border-[16px] border-white shadow-2xl overflow-hidden relative">
                 <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover">
-                <div class="absolute bottom-10 left-10 glass-card p-6 rounded-3xl animate-float">
-                    <span class="text-[10px] font-black text-blue-500 uppercase block mb-1">Open Everyday</span>
-                    <span class="text-lg font-black text-slate-900 tracking-tighter">9:00 AM - 10:00 PM</span>
-                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-32 px-6 md:px-16">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
-            <div class="lg:w-1/2 grid grid-cols-2 gap-4 reveal-up">
-                <div class="space-y-4">
-                    <div class="h-64 bg-slate-100 rounded-[40px] overflow-hidden shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600" class="w-full h-full object-cover">
-                    </div>
-                    <div class="h-48 bg-blue-600 rounded-[40px] p-8 text-white flex flex-col justify-end">
-                        <div class="text-4xl font-900">10+</div>
-                        <div class="text-[10px] font-bold uppercase tracking-widest">Years Expertise</div>
-                    </div>
-                </div>
-                <div class="pt-12 space-y-4">
-                    <div class="h-48 bg-slate-900 rounded-[40px] p-8 text-white flex flex-col justify-end">
-                        <div class="text-4xl font-900">2</div>
-                        <div class="text-[10px] font-bold uppercase tracking-widest">Elite Branches</div>
-                    </div>
-                    <div class="h-64 bg-slate-100 rounded-[40px] overflow-hidden shadow-inner">
-                        <img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&w=600" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-            <div class="lg:w-1/2 space-y-8 reveal-up">
-                <h2 class="text-5xl md:text-6xl font-800 tracking-tighter text-slate-900">Led by Visionary <br><span class="text-blue-600 underline decoration-blue-100">Specialists.</span></h2>
-                <p class="text-slate-500 text-lg leading-relaxed">
-                    Nagu Dental Clinic is an **Advance Multi-Speciality** center dedicated to redefining oral healthcare in Bengaluru. Led by **Dr. Bashishta (B.D.S)** and **Dr. Ankita Reddy (B.D.S)**, our team focuses on surgical precision and a gentle touch.
+    <section id="about" class="py-24 px-6 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2 reveal-up">
+                <h2 class="text-5xl font-800 text-slate-900 tracking-tighter mb-6">About Our Clinic</h2>
+                <p class="text-slate-500 text-lg leading-relaxed mb-6">
+                    Nagu Dental is an <b>Advance Multi-Speciality Dental Clinic</b> led by <b>Dr. Bashishta (B.D.S)</b> and <b>Dr. Ankita Reddy (B.D.S)</b>. We provide a wide range of dental services using the latest technology and highest sterilization standards.
                 </p>
-                <div class="grid grid-cols-2 gap-8 pt-6 border-t border-slate-100">
-                    <div>
-                        <h4 class="font-bold text-slate-900">Dr. Bashishta</h4>
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Dental Surgeon</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Dr. Ankita Reddy</h4>
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Dental Surgeon</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-32 bg-slate-50 overflow-hidden">
-        <div class="px-6 md:px-16 mb-20 flex flex-col md:flex-row justify-between items-end">
-            <div>
-                <h2 class="text-5xl font-800 text-slate-900 tracking-tighter mb-4">Master Specialties</h2>
-                <div class="h-1.5 w-24 bg-blue-600 rounded-full"></div>
-            </div>
-            <p class="text-slate-400 text-sm max-w-xs md:text-right">Advanced clinical solutions designed for permanent dental restoration and health.</p>
-        </div>
-        <div class="flex gap-8 px-6 md:px-16 overflow-x-auto no-scrollbar pb-12 snap-x">
-            <div class="service-sticker snap-center bg-white p-12 rounded-[60px] border border-slate-100 min-w-[320px] flex-shrink-0 hover-lift">
-                <div class="text-5xl mb-8">🦷</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Root Canal</h3>
-                <p class="text-sm text-slate-400 leading-relaxed mb-8">Painless rotary procedures to save your natural teeth with precision.</p>
-                <div class="text-[10px] font-black text-blue-600 uppercase tracking-widest">clinical procedure →</div>
-            </div>
-            <div class="service-sticker snap-center bg-white p-12 rounded-[60px] border border-slate-100 min-w-[320px] flex-shrink-0 hover-lift">
-                <div class="text-5xl mb-8">💎</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Dental Implants</h3>
-                <p class="text-sm text-slate-400 leading-relaxed mb-8">Modern titanium restorations for a lifetime of confident chewing.</p>
-                <div class="text-[10px] font-black text-blue-600 uppercase tracking-widest">clinical procedure →</div>
-            </div>
-            <div class="service-sticker snap-center bg-white p-12 rounded-[60px] border border-slate-100 min-w-[320px] flex-shrink-0 hover-lift">
-                <div class="text-5xl mb-8">✨</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Teeth Whitening</h3>
-                <p class="text-sm text-slate-400 leading-relaxed mb-8">Advanced laser whitening for instant aesthetic results without sensitivity.</p>
-                <div class="text-[10px] font-black text-blue-600 uppercase tracking-widest">Aesthetic Care →</div>
-            </div>
-            <div class="service-sticker snap-center bg-white p-12 rounded-[60px] border border-slate-100 min-w-[320px] flex-shrink-0 hover-lift">
-                <div class="text-5xl mb-8">⚙️</div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">Braces & Aligner</h3>
-                <p class="text-sm text-slate-400 leading-relaxed mb-8">Perfect alignment using traditional or invisible orthodontic systems.</p>
-                <div class="text-[10px] font-black text-blue-600 uppercase tracking-widest">Ortho Care →</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-us" class="py-32 bg-slate-900 text-white rounded-[100px] mx-4 my-10">
-        <div class="px-6 md:px-16 grid lg:grid-cols-3 gap-16">
-            <div class="space-y-6">
-                <div class="text-blue-500 text-xs font-black uppercase tracking-[0.5em]">Advantage</div>
-                <h2 class="text-5xl font-800 tracking-tighter">Why Choose <br>Nagu Dental?</h2>
-                <p class="text-slate-500 text-sm leading-relaxed">We don't just treat teeth; we care for smiles with a focus on hygiene, technology, and patient comfort.</p>
-            </div>
-            <div class="space-y-12 lg:col-span-2 grid md:grid-cols-2 gap-12">
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl shrink-0">🛡️</div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-2">Painless Tech</h4>
-                        <p class="text-slate-500 text-xs">Modern rotary and laser tools for minimal discomfort.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl shrink-0">🧼</div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-2">High Sterilization</h4>
-                        <p class="text-slate-500 text-xs">ISO-standard clinical protocols for your safety.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl shrink-0">💰</div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-2">Affordable Care</h4>
-                        <p class="text-slate-500 text-xs">Elite multi-speciality care at accessible pricing.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6 items-start">
-                    <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl shrink-0">🤝</div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-2">Compassionate</h4>
-                        <p class="text-slate-500 text-xs">Gentle touch approach for nervous patients and children.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-32 px-6 md:px-16">
-        <div class="text-center mb-20 space-y-4">
-            <h2 class="text-5xl font-800 tracking-tighter text-slate-900">Clinical Gallery</h2>
-            <p class="text-slate-400 text-sm uppercase font-bold tracking-widest">A glimpse of our world-class environment</p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
-            <div class="bg-slate-100 rounded-[40px] overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            </div>
-            <div class="col-span-2 bg-slate-100 rounded-[40px] overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            </div>
-            <div class="bg-slate-100 rounded-[40px] overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-950 text-white pt-32 pb-12 px-6 md:px-16">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 border-b border-white/5 pb-24">
-            <div class="col-span-2 space-y-8">
-                <div class="text-3xl font-900 tracking-tighter">NAGU DENTAL.</div>
-                <p class="text-slate-500 text-sm max-w-sm leading-relaxed">Bengaluru's premier advance multi-speciality clinic focusing on surgical excellence and patient comfort.</p>
                 <div class="flex gap-4">
-                    <a href="#" class="social-sticker">📸</a>
-                    <a href="#" class="social-sticker">📘</a>
-                    <a href="https://wa.me/918861932535" class="social-sticker !bg-[#25D366]">💬</a>
+                    <div class="p-4 bg-blue-50 rounded-2xl border border-blue-100">
+                        <span class="block text-2xl font-900 text-blue-600">10+</span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Years Exp</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                        <span class="block text-2xl font-900 text-slate-900">2</span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Locations</span>
+                    </div>
                 </div>
             </div>
-            <div class="space-y-8">
-                <h6 class="text-[10px] font-black text-blue-500 uppercase tracking-widest">1st Branch</h6>
-                <p class="text-slate-500 text-xs leading-relaxed">
-                    #10/2, 1st Floor, Chikkathimme Gowdru complex,<br>
-                    Hegganahalli Cross, Opp. Suresh Hospital,<br>
-                    Bengaluru, Karnataka 560091
-                </p>
-            </div>
-            <div class="space-y-8">
-                <h6 class="text-[10px] font-black text-blue-500 uppercase tracking-widest">2nd Branch</h6>
-                <p class="text-slate-500 text-xs leading-relaxed">
-                    #73/1, KTG College Road,<br>
-                    Near Shree Vidya Vruddhi Mandira School,<br>
-                    Srigandha Nagar, Bengaluru 560091
-                </p>
+            <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=400" class="rounded-3xl shadow-lg mt-8">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400" class="rounded-3xl shadow-lg">
             </div>
         </div>
-        
-        <div class="flex flex-col md:flex-row justify-between items-center pt-10 gap-6">
-            <p class="text-[9px] font-bold text-slate-700 uppercase tracking-[0.4em]">© 2026 Nagu Dental Clinic | All Rights Reserved</p>
-            <div class="flex gap-8 text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                <a href="#about">Our Team</a>
-                <a href="#services">Specialties</a>
-                <a href="tel:+918861932535">+91 88619 32535</a>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="px-6 md:px-16 mb-16 text-center">
+            <h2 class="text-5xl font-800 text-slate-900 tracking-tighter">Our Services</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-8 px-6 md:px-16 max-w-7xl mx-auto">
+            <div class="service-card bg-white p-6 rounded-[40px] border border-slate-100 hover-lift reveal-up">
+                <div class="h-40 w-full bg-slate-100 rounded-3xl mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=300" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all">
+                </div>
+                <h3 class="font-bold text-xl mb-2">Root Canal</h3>
+                <p class="text-xs text-slate-400 mb-4">Painless treatment to save infected teeth.</p>
+                <span class="text-[9px] font-black text-blue-600 uppercase tracking-widest">clinical →</span>
+            </div>
+            <div class="service-card bg-white p-6 rounded-[40px] border border-slate-100 hover-lift reveal-up">
+                <div class="h-40 w-full bg-slate-100 rounded-3xl mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=300" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all">
+                </div>
+                <h3 class="font-bold text-xl mb-2">Implants</h3>
+                <p class="text-xs text-slate-400 mb-4">Permanent solutions for missing teeth.</p>
+                <span class="text-[9px] font-black text-blue-600 uppercase tracking-widest">restoration →</span>
+            </div>
+            <div class="service-card bg-white p-6 rounded-[40px] border border-slate-100 hover-lift reveal-up">
+                <div class="h-40 w-full bg-slate-100 rounded-3xl mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=300" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all">
+                </div>
+                <h3 class="font-bold text-xl mb-2">Whitening</h3>
+                <p class="text-xs text-slate-400 mb-4">Brighten your smile in one visit.</p>
+                <span class="text-[9px] font-black text-blue-600 uppercase tracking-widest">cosmetic →</span>
+            </div>
+            <div class="service-card bg-white p-6 rounded-[40px] border border-slate-100 hover-lift reveal-up">
+                <div class="h-40 w-full bg-slate-100 rounded-3xl mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551601651-261ed073930e?auto=format&fit=crop&w=300" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all">
+                </div>
+                <h3 class="font-bold text-xl mb-2">Ortho Braces</h3>
+                <p class="text-xs text-slate-400 mb-4">Traditional and clear aligner options.</p>
+                <span class="text-[9px] font-black text-blue-600 uppercase tracking-widest">orthodontic →</span>
             </div>
         </div>
+    </section>
+
+    <section id="booking" class="py-24 px-6 md:px-16">
+        <div class="max-w-4xl mx-auto bg-slate-900 rounded-[60px] p-12 md:p-20 relative overflow-hidden text-white">
+            <div class="relative z-10 text-center mb-12">
+                <h2 class="text-4xl font-800 tracking-tighter mb-4">Book An Appointment</h2>
+                <p class="text-slate-400 text-sm italic">"Open Everyday | 9:00 AM - 10:00 PM"</p>
+            </div>
+            <form class="grid md:grid-cols-2 gap-6 relative z-10">
+                <input type="text" placeholder="Full Name" class="bg-white/5 border border-white/10 p-4 rounded-2xl focus:border-blue-500 outline-none">
+                <input type="tel" placeholder="Phone Number" class="bg-white/5 border border-white/10 p-4 rounded-2xl focus:border-blue-500 outline-none">
+                <select class="bg-white/5 border border-white/10 p-4 rounded-2xl outline-none">
+                    <option class="text-black">Select Branch</option>
+                    <option class="text-black">Hegganahalli</option>
+                    <option class="text-black">Srigandha Nagar</option>
+                </select>
+                <input type="date" class="bg-white/5 border border-white/10 p-4 rounded-2xl outline-none">
+                <button class="md:col-span-2 bg-blue-600 text-white font-bold py-5 rounded-2xl active-haptic shadow-xl">Confirm Request</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="articles" class="py-24 px-6 md:px-16">
+        <div class="flex justify-between items-end mb-16">
+            <h2 class="text-5xl font-800 tracking-tighter">Dental Insights</h2>
+            <a href="#" class="text-xs font-black uppercase text-blue-600 underline">View Blog</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer reveal-up">
+                <div class="h-64 rounded-[40px] overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1593054325492-4914a806c9a3?auto=format&fit=crop&w=400" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                </div>
+                <h4 class="font-bold text-xl mb-2">Why Sterilization Matters?</h4>
+                <p class="text-slate-500 text-xs mb-4">Understanding ISO clinical standards in dentistry.</p>
+                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">3 Min Read</span>
+            </div>
+            </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white border-t border-slate-100">
+        <div class="px-6 md:px-16 grid lg:grid-cols-3 gap-16">
+            <div>
+                <h2 class="text-4xl font-800 tracking-tighter mb-8">Contact Us</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h6 class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-2">Call/WhatsApp</h6>
+                        <p class="font-bold text-xl text-slate-900">+91 88619 32535</p>
+                    </div>
+                    <div>
+                        <h6 class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-2">Email</h6>
+                        <p class="font-bold text-slate-600">nagudentals@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+                <div class="p-8 bg-slate-50 rounded-[40px] border border-slate-100">
+                    <h4 class="font-bold mb-4">Branch 01: Hegganahalli</h4>
+                    <p class="text-xs text-slate-400 italic">Opp. Suresh Hospital, Hegganahalli Cross, Bengaluru.</p>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-[40px] border border-slate-100">
+                    <h4 class="font-bold mb-4">Branch 02: Srigandha Nagar</h4>
+                    <p class="text-xs text-slate-400 italic">Near KTG College Road, Bengaluru.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-white pt-24 pb-12 px-6 md:px-16">
+        <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/5 pb-12 gap-8">
+            <span class="text-2xl font-900 tracking-tighter italic">"Way For Healthy Smile..."</span>
+            <div class="flex gap-4">
+                <a href="#" class="social-sticker">📸</a>
+                <a href="https://wa.me/918861932535" class="social-sticker !bg-[#25D366]">💬</a>
+            </div>
+        </div>
+        <p class="text-center pt-8 text-[9px] font-bold text-slate-700 uppercase tracking-[0.5em]">© 2026 NAGU DENTAL CLINIC | ADVANCE MULTI-SPECIALITY</p>
     </footer>
 
-    <div id="mapModal" class="fixed inset-0 z-[2000] hidden items-center justify-center p-6">
-        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl" onclick="toggleMap()"></div>
-        <div class="relative bg-white w-full max-w-5xl rounded-[60px] p-12 overflow-hidden shadow-2xl">
-            <button onclick="toggleMap()" class="absolute top-10 right-10 text-slate-300 font-bold hover:text-slate-900">✕</button>
-            <h2 class="text-4xl font-800 text-slate-900 mb-12 tracking-tighter">Navigate To Branch</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="p-8 bg-slate-50 rounded-[40px] border border-slate-100 group">
-                    <h4 class="text-2xl font-bold mb-4">Hegganahalli</h4>
-                    <p class="text-sm text-slate-400 mb-8 italic">Opp. Suresh Hospital, Main Road</p>
-                    <a href="https://maps.google.com" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-xs font-black">Open in Maps</a>
-                </div>
-                <div class="p-8 bg-slate-50 rounded-[40px] border border-slate-100 group">
-                    <h4 class="text-2xl font-bold mb-4">Srigandha Nagar</h4>
-                    <p class="text-sm text-slate-400 mb-8 italic">Near KTG College, Srigandha Nagar</p>
-                    <a href="https://maps.google.com" class="inline-block bg-slate-900 text-white px-8 py-3 rounded-full text-xs font-black">Open in Maps</a>
-                </div>
-            </div>
+    <div class="fixed bottom-10 right-10 z-[1500] flex flex-col gap-4">
+        <div id="cta-options" class="hidden flex flex-col gap-4 items-end mb-2">
+            <a href="tel:+918861932535" class="bg-white text-slate-900 p-4 rounded-2xl shadow-xl flex items-center gap-3 active-haptic">
+                <span class="text-xs font-black uppercase">Call Now</span>
+                <span class="text-xl">📞</span>
+            </a>
+            <a href="https://wa.me/918861932535" class="bg-[#25D366] text-white p-4 rounded-2xl shadow-xl flex items-center gap-3 active-haptic">
+                <span class="text-xs font-black uppercase">WhatsApp</span>
+                <span class="text-xl">💬</span>
+            </a>
         </div>
+        <button onclick="toggleCTA()" class="w-16 h-16 bg-[#0085cc] text-white rounded-[24px] shadow-2xl flex items-center justify-center text-3xl active-haptic" id="cta-main">
+            ✨
+        </button>
     </div>
 
     <script src="script.js"></script>
